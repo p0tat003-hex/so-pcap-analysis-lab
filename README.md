@@ -151,9 +151,9 @@ The first step can be executed by first accessing the Security Onion dashboard t
 
 Events can be sorted by severity, which lets an analyst immediately spot and focus on the high-priority alerts. What’s most valuable is that Security Onion can identify the specific malware, in this case, **Trickbot**. It does this automatically by matching the network traffic against known signatures and behavioral rules. This identification is very useful for the analyst as it provides the right context for where to begin investigating.
 
-![Severeity](images/severe.png)
+![Severity](images/severe.png)
 
-Using multiple online public sources like Google or Virustotal, we could learn more about this malware, its detections, and what the community has to say about it. Of course we could also analyze it further using the **Hunt** function in SO which shows interesting findings like geo location.
+Using multiple online public sources like Google or VirusTotal, we could learn more about this malware, its detections, and what the community has to say about it. Of course we could also analyze it further using the **Hunt** function in SO which shows interesting findings like geo location.
 
 ![SO Hunt](images/hunt.png)
 
@@ -175,7 +175,7 @@ In this step, an analyst can dive into **Kibana** and filter for Zeek connection
 
 ---
 
-### Step 7: Collaborative work on the analysis using SO 
+### Step 7: Collaborative Analysis
 
 Analysts can move into Security Onion's **Cases** section. This feature acts as a shared investigative workspace. A new case for the incident can be opened, allowing the team to centralize all findings, upload relevant evidence like packet captures, and document potential Indicators of Compromise (IOCs). The case can also be used to discuss further updates or interesting findings discovered during the investigation.
 
@@ -191,7 +191,7 @@ Analysts can move into Security Onion's **Cases** section. This feature acts as 
 Based on the SO hunt alerts and Zeek logs, the key attacker (C2 server) IP is '36.89.106.69'. The victim on the internal network is '10.5.28.229'. The rule will alert on any traffic to the known malicious C2 IP.
 
 #### **2- Creating the custom rule**
-Going back to the original trickbot malware rule detection I wanted to do a custom rule that detects that this exact IP is part of an excercise by malware-traffic-analysis.net, so by duplicating and editing the original alert we can easily achieve this by editing the Detection source as shown below:
+Going back to the original trickbot malware rule detection I wanted to do a custom rule that detects that this exact IP is part of an exercise by malware-traffic-analysis.net, so by duplicating and editing the original alert we can easily achieve this by editing the Detection source as shown below:
 
 
 ![rule1](images/rule1.png)
